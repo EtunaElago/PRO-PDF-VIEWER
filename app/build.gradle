@@ -32,7 +32,6 @@ android {
 
         // BuildConfig fields
         buildConfigField "String", "APP_NAME", "\"PRO PDF Viewer\""
-        buildConfigField "String", "BUILD_TYPE", "\"${buildType.name}\""
         
         // FileProvider authority
         resValue "string", "file_provider_authority", "com.PRO.propdf.fileprovider"
