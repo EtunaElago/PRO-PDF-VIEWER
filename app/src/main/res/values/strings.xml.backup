@@ -162,6 +162,7 @@
     <string name="action_rename">Rename</string>
     <string name="action_move_to">Move to…</string>
     <string name="action_copy_to">Copy to…</string>
+    <string name="action_share">Share</string>
     <string name="action_info">Info</string>
     <string name="action_move_to_bin">Move to Bin</string>
     <string name="action_delete_permanently">Delete Permanently</string>
@@ -170,6 +171,7 @@
     <string name="action_restore">Restore</string>
 
     <!-- Actions -->
+    <string name="action_share">Share</string>
     <string name="action_delete">Delete</string>
     <string name="action_restore">Restore</string>
     <string name="action_move_to">Move to</string>
@@ -361,5 +363,4 @@
     <string name="contact_subject">PRO PDF Viewer Feedback</string>
     <string name="contact_body">Please share your feedback or report any issues:</string>
 
-<string name="action_share">Share</string>
 </resources>
