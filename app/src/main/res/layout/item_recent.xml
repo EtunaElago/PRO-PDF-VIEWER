@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_corner"
+    android:padding="16dp">
+
+    <!-- PDF Icon -->
+    <ImageView
+        android:id="@+id/imagePdfIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_pdf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="?attr/colorPrimary" />
+
+    <!-- PDF Info -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/buttonRemove"
+        app:layout_constraintStart_toEndOf="@+id/imagePdfIcon"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textPdfName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="PDF File Name"
+            android:textAppearance="?attr/textAppearanceBodyLarge"
+            android:textColor="?attr/colorOnSurface"
+            tools:text="Recent Document.pdf" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textLastOpened"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="2 hours ago"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            tools:text="2 hours ago" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textPageInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Page 5 of 15"
+                android:textAppearance="?attr/textAppearanceBodySmall"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                tools:text="Page 5 of 15" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/colorOnSurfaceVariant"
+                android:alpha="0.5" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textFolderName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Documents"
+                android:textAppearance="?attr/textAppearanceBodySmall"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                tools:text="Documents" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Warning Icon (for missing files) -->
+    <ImageView
+        android:id="@+id/imageWarning"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/ic_warning"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/imagePdfIcon"
+        app:layout_constraintTop_toBottomOf="@+id/imagePdfIcon"
+        app:tint="?attr/colorError" />
+
+    <!-- File Missing Text -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textFileMissing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/file_missing"
+        android:textAppearance="?attr/textAppearanceBodySmall"
+        android:textColor="?attr/colorError"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/imageWarning"
+        app:layout_constraintStart_toEndOf="@+id/imageWarning"
+        app:layout_constraintTop_toTopOf="@+id/imageWarning" />
+
+    <!-- Remove Button -->
+    <ImageButton
+        android:id="@+id/buttonRemove"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_close"
+        android:contentDescription="@string/remove"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="?attr/colorOnSurfaceVariant" />
+
+    <!-- Selection Checkbox -->
+    <CheckBox
+        android:id="@+id/checkboxSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="?attr/colorPrimary"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Selection Overlay -->
+    <View
+        android:id="@+id/selectionOverlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?attr/colorPrimaryContainer"
+        android:alpha="0.1"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

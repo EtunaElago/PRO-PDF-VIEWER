@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/android">
+
+    <!-- Search Recent Files -->
+    <item
+        android:id="@+id/action_search_recents"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search_recents"
+        app:showAsAction="collapseActionView|always"
+        app:actionViewClass="androidx.appcompat.widget.SearchView" />
+
+    <!-- Clear All Recents -->
+    <item
+        android:id="@+id/action_clear_all"
+        android:icon="@drawable/ic_clear_all"
+        android:title="@string/clear_all"
+        app:showAsAction="ifRoom" />
+
+    <!-- Sort Recents -->
+    <item
+        android:id="@+id/action_sort_recents"
+        android:icon="@drawable/ic_sort"
+        android:title="@string/sort"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <!-- Sort by Date -->
+            <item
+                android:id="@+id/action_sort_by_date"
+                android:checkable="true"
+                android:checked="true"
+                android:title="@string/sort_by_date" />
+
+            <!-- Sort by Name -->
+            <item
+                android:id="@+id/action_sort_by_name"
+                android:checkable="true"
+                android:title="@string/sort_by_name" />
+
+            <!-- Sort by Size -->
+            <item
+                android:id="@+id/action_sort_by_size"
+                android:checkable="true"
+                android:title="@string/sort_by_size" />
+
+            <!-- Sort Order -->
+            <item
+                android:id="@+id/action_sort_order"
+                android:title="@string/sort_order">
+                <menu>
+                    <item
+                        android:id="@+id/action_ascending"
+                        android:checkable="true"
+                        android:checked="true"
+                        android:title="@string/ascending" />
+                    <item
+                        android:id="@+id/action_descending"
+                        android:checkable="true"
+                        android:title="@string/descending" />
+                </menu>
+            </item>
+        </menu>
+
+    </item>
+
+    <!-- Filter by Time -->
+    <item
+        android:id="@+id/action_filter"
+        android:icon="@drawable/ic_filter"
+        android:title="@string/filter"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <item
+                android:id="@+id/action_filter_today"
+                android:title="@string/today" />
+            <item
+                android:id="@+id/action_filter_week"
+                android:title="@string/this_week" />
+            <item
+                android:id="@+id/action_filter_month"
+                android:title="@string/this_month" />
+            <item
+                android:id="@+id/action_filter_all"
+                android:title="@string/all_time" />
+        </menu>
+
+    </item>
+
+</menu>

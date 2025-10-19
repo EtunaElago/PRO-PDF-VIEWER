@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <!-- Home Fragment - Main Screen -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.PRO.propdf.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+
+        <!-- Action to PDF Viewer -->
+        <action
+            android:id="@+id/action_home_to_pdfViewer"
+            app:destination="@id/pdfViewerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Action to Create Folder Dialog -->
+        <action
+            android:id="@+id/action_home_to_createFolderDialog"
+            app:destination="@id/createFolderDialog" />
+
+        <!-- Deep Link for Home -->
+        <deepLink app:uri="propdf://home" />
+
+    </fragment>
+
+    <!-- PDF Viewer Fragment -->
+    <fragment
+        android:id="@+id/pdfViewerFragment"
+        android:name="com.PRO.propdf.ui.pdfviewer.PdfViewerFragment"
+        android:label="@string/title_pdf_viewer"
+        tools:layout="@layout/fragment_pdf_viewer">
+
+        <argument
+            android:name="pdfId"
+            app:argType="long"
+            android:defaultValue="-1" />
+
+        <argument
+            android:name="pdfPath"
+            app:argType="string" />
+
+        <argument
+            android:name="pdfTitle"
+            app:argType="string"
+            android:defaultValue="PDF Document" />
+
+        <argument
+            android:name="folderId"
+            app:argType="long"
+            android:defaultValue="-1" />
+
+        <!-- Action back to Home -->
+        <action
+            android:id="@+id/action_pdfViewer_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+
+        <!-- Action to Search in PDF Dialog -->
+        <action
+            android:id="@+id/action_pdfViewer_to_searchPdfDialog"
+            app:destination="@id/searchPdfDialog" />
+
+        <!-- Deep Link for PDF Viewer -->
+        <deepLink app:uri="propdf://view/pdf/{pdfId}" />
+
+    </fragment>
+
+    <!-- Recents Fragment -->
+    <fragment
+        android:id="@+id/recentsFragment"
+        android:name="com.PRO.propdf.ui.recents.RecentsFragment"
+        android:label="@string/title_recents"
+        tools:layout="@layout/fragment_recents">
+
+        <!-- Action to PDF Viewer from Recents -->
+        <action
+            android:id="@+id/action_recents_to_pdfViewer"
+            app:destination="@id/pdfViewerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Deep Link for Recents -->
+        <deepLink app:uri="propdf://recents" />
+
+    </fragment>
+
+    <!-- Settings Fragment -->
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.PRO.propdf.ui.settings.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings">
+
+        <!-- Action to Bin -->
+        <action
+            android:id="@+id/action_settings_to_bin"
+            app:destination="@id/binFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Action to About -->
+        <action
+            android:id="@+id/action_settings_to_about"
+            app:destination="@id/aboutFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Action to Contact -->
+        <action
+            android:id="@+id/action_settings_to_contact"
+            app:destination="@id/contactFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Deep Link for Settings -->
+        <deepLink app:uri="propdf://settings" />
+
+    </fragment>
+
+    <!-- Bin Fragment -->
+    <fragment
+        android:id="@+id/binFragment"
+        android:name="com.PRO.propdf.ui.settings.BinFragment"
+        android:label="@string/title_bin"
+        tools:layout="@layout/fragment_bin">
+
+        <!-- Action back to Settings -->
+        <action
+            android:id="@+id/action_bin_to_settings"
+            app:destination="@id/settingsFragment"
+            app:popUpTo="@id/settingsFragment"
+            app:popUpToInclusive="true" />
+
+        <!-- Action to PDF Viewer from Bin -->
+        <action
+            android:id="@+id/action_bin_to_pdfViewer"
+            app:destination="@id/pdfViewerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Deep Link for Bin -->
+        <deepLink app:uri="propdf://bin" />
+
+    </fragment>
+
+    <!-- About Fragment -->
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.PRO.propdf.ui.settings.AboutFragment"
+        android:label="@string/title_about"
+        tools:layout="@layout/fragment_about">
+
+        <!-- Action back to Settings -->
+        <action
+            android:id="@+id/action_about_to_settings"
+            app:destination="@id/settingsFragment"
+            app:popUpTo="@id/settingsFragment"
+            app:popUpToInclusive="true" />
+
+        <!-- Deep Link for About -->
+        <deepLink app:uri="propdf://about" />
+
+    </fragment>
+
+    <!-- Contact Fragment -->
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.PRO.propdf.ui.settings.ContactFragment"
+        android:label="@string/title_contact"
+        tools:layout="@layout/fragment_contact">
+
+        <!-- Action back to Settings -->
+        <action
+            android:id="@+id/action_contact_to_settings"
+            app:destination="@id/settingsFragment"
+            app:popUpTo="@id/settingsFragment"
+            app:popUpToInclusive="true" />
+
+        <!-- Deep Link for Contact -->
+        <deepLink app:uri="propdf://contact" />
+
+    </fragment>
+
+    <!-- Dialogs -->
+
+    <!-- Create Folder Dialog -->
+    <dialog
+        android:id="@+id/createFolderDialog"
+        android:name="com.PRO.propdf.ui.folders.CreateFolderDialog"
+        android:label="@string/title_create_folder"
+        tools:layout="@layout/dialog_create_folder">
+
+        <argument
+            android:name="parentFolderId"
+            app:argType="long"
+            android:defaultValue="-1" />
+
+    </dialog>
+
+    <!-- Search PDF Dialog -->
+    <dialog
+        android:id="@+id/searchPdfDialog"
+        android:name="com.PRO.propdf.ui.pdfviewer.SearchPdfDialog"
+        android:label="@string/title_search_pdf"
+        tools:layout="@layout/dialog_search_pdf">
+
+        <argument
+            android:name="pdfId"
+            app:argType="long" />
+
+    </dialog>
+
+    <!-- Sort Dialog -->
+    <dialog
+        android:id="@+id/sortDialog"
+        android:name="com.PRO.propdf.ui.dialogs.SortDialog"
+        android:label="@string/title_sort"
+        tools:layout="@layout/dialog_sort">
+
+        <argument
+            android:name="currentSortType"
+            app:argType="string"
+            android:defaultValue="name" />
+
+        <argument
+            android:name="currentSortOrder"
+            app:argType="string"
+            android:defaultValue="ascending" />
+
+    </dialog>
+
+    <!-- Theme Dialog -->
+    <dialog
+        android:id="@+id/themeDialog"
+        android:name="com.PRO.propdf.ui.dialogs.ThemeDialog"
+        android:label="@string/title_theme"
+        tools:layout="@layout/dialog_theme">
+
+        <argument
+            android:name="currentTheme"
+            app:argType="string"
+            android:defaultValue="auto" />
+
+    </dialog>
+
+    <!-- View Mode Dialog -->
+    <dialog
+        android:id="@+id/viewModeDialog"
+        android:name="com.PRO.propdf.ui.dialogs.ViewModeDialog"
+        android:label="@string/title_view_mode"
+        tools:layout="@layout/dialog_view_mode">
+
+        <argument
+            android:name="currentViewMode"
+            app:argType="string"
+            android:defaultValue="grid" />
+
+    </dialog>
+
+    <!-- Context Menu Dialog -->
+    <dialog
+        android:id="@+id/contextMenuDialog"
+        android:name="com.PRO.propdf.ui.dialogs.ContextMenuDialog"
+        android:label="@string/title_context_menu"
+        tools:layout="@layout/dialog_context_menu">
+
+        <argument
+            android:name="itemId"
+            app:argType="long" />
+
+        <argument
+            android:name="itemType"
+            app:argType="string" />
+
+        <argument
+            android:name="itemName"
+            app:argType="string" />
+
+        <argument
+            android:name="isInFolder"
+            app:argType="boolean"
+            android:defaultValue="false" />
+
+    </dialog>
+
+</navigation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules xmlns:android="http://schemas.android.com/apk/res/android">
+    <cloud-backup>
+        <!-- Include user data for cloud backup -->
+        <include domain="file" path="user_documents/"/>
+        <include domain="file" path="user_settings/"/>
+        <include domain="sharedpref" path="app_preferences.xml"/>
+        <include domain="database" path="pro_pdf_database"/>
+        
+        <!-- Exclude cached and temporary data -->
+        <exclude domain="file" path="cache/"/>
+        <exclude domain="file" path="temp/"/>
+        <exclude domain="file" path="tmp/"/>
+        <exclude domain="external" path="Android/data/com.PRO.propdf/cache"/>
+    </cloud-backup>
+    
+    <device-transfer>
+        <!-- Include all user data for device-to-device transfer -->
+        <include domain="file" path="."/>
+        <include domain="sharedpref" path="."/>
+        <include domain="database" path="."/>
+        <include domain="external" path="Android/data/com.PRO.propdf/"/>
+        
+        <!-- Exclude analytics and crash data -->
+        <exclude domain="sharedpref" path="firebase_analytics"/>
+        <exclude domain="sharedpref" path="com.google.firebase.crashlytics"/>
+        <exclude domain="file" path="crashlytics/"/>
+    </device-transfer>
+</data-extraction-rules>

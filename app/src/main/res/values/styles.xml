@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.ProPdfViewer" />
+
+    <!-- Text Styles -->
+    <style name="TextAppearance.ProPdfViewer.Headline1" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:lineHeight">40sp</item>
+    </style>
+
+    <style name="TextAppearance.ProPdfViewer.Headline2" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:lineHeight">32sp</item>
+    </style>
+
+    <style name="TextAppearance.ProPdfViewer.Title" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:lineHeight">28sp</item>
+    </style>
+
+    <style name="TextAppearance.ProPdfViewer.Body1" parent="TextAppearance.Material3.BodyLarge">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:lineHeight">24sp</item>
+    </style>
+
+    <style name="TextAppearance.ProPdfViewer.Body2" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:lineHeight">20sp</item>
+    </style>
+
+    <style name="TextAppearance.ProPdfViewer.Caption" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/color_icon_secondary</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="android:lineHeight">16sp</item>
+    </style>
+
+    <!-- Button Styles -->
+    <style name="Widget.ProPdfViewer.Button.Primary" parent="Widget.Material3.Button">
+        <item name="android:background">@drawable/bg_button_primary</item>
+        <item name="android:textColor">@color/color_on_primary</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="cornerRadius">24dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.ProPdfViewer.Body2</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.ProPdfViewer.Button.Secondary" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:background">@drawable/bg_button_secondary</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="strokeColor">?attr/colorPrimary</item>
+        <item name="strokeWidth">1.5dp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:minHeight">44dp</item>
+        <item name="cornerRadius">22dp</item>
+    </style>
+
+    <style name="Widget.ProPdfViewer.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <!-- Card Styles -->
+    <style name="Widget.ProPdfViewer.Card" parent="Widget.Material3.CardView">
+        <item name="cardBackgroundColor">@color/color_card_background</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="strokeColor">@color/color_outline</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="Widget.ProPdfViewer.Card.Folder" parent="Widget.ProPdfViewer.Card">
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="Widget.ProPdfViewer.Card.Pdf" parent="Widget.ProPdfViewer.Card">
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="cardElevation">2dp</item>
+    </style>
+
+    <!-- Toolbar Styles -->
+    <style name="Widget.ProPdfViewer.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">?attr/colorSurface</item>
+        <item name="android:elevation">4dp</item>
+        <item name="titleTextColor">?attr/colorOnSurface</item>
+        <item name="subtitleTextColor">?attr/colorOnSurfaceVariant</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="titleTextAppearance">@style/TextAppearance.ProPdfViewer.Title</item>
+        <item name="subtitleTextAppearance">@style/TextAppearance.ProPdfViewer.Body2</item>
+    </style>
+
+    <!-- Bottom Navigation Styles -->
+    <style name="Widget.ProPdfViewer.BottomNavigation" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">?attr/colorSurface</item>
+        <item name="android:elevation">8dp</item>
+        <item name="itemIconTint">@color/bottom_nav_icon_selector</item>
+        <item name="itemTextColor">@color/bottom_nav_text_selector</item>
+        <item name="itemBackground">?attr/selectableItemBackground</item>
+        <item name="itemRippleColor">?attr/colorPrimary</item>
+        <item name="itemHorizontalTranslationEnabled">false</item>
+        <item name="labelVisibilityMode">labeled</item>
+    </style>
+
+    <!-- Search View Styles -->
+    <style name="Widget.ProPdfViewer.SearchView" parent="Widget.Material3.SearchView">
+        <item name="android:background">@drawable/bg_search_view</item>
+        <item name="android:padding">12dp</item>
+        <item name="searchHintColor">@color/color_icon_secondary</item>
+        <item name="searchPrefixTextColor">?attr/colorPrimary</item>
+        <item name="cornerRadius">24dp</item>
+        <item name="elevation">2dp</item>
+    </style>
+
+    <!-- List Item Styles -->
+    <style name="Widget.ProPdfViewer.ListItem" parent="Widget.Material3.ListItem">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:minHeight">64dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.ProPdfViewer.Medium</item>
+    </style>
+
+    <!-- Progress Bar Styles -->
+    <style name="Widget.ProPdfViewer.ProgressBar" parent="Widget.Material3.CircularProgressIndicator">
+        <item name="indicatorColor">?attr/colorPrimary</item>
+        <item name="trackColor">?attr/colorSurfaceVariant</item>
+        <item name="indicatorSize">48dp</item>
+        <item name="trackThickness">4dp</item>
+    </style>
+
+    <!-- Chip Styles -->
+    <style name="Widget.ProPdfViewer.Chip" parent="Widget.Material3.Chip.Assist">
+        <item name="chipBackgroundColor">@color/color_surface_variant</item>
+        <item name="chipStrokeColor">@color/color_outline</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipCornerRadius">16dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.ProPdfViewer.Caption</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <!-- PDF Thumbnail Styles -->
+    <style name="Widget.ProPdfViewer.PdfThumbnail">
+        <item name="android:background">@color/color_pdf_thumb_background</item>
+        <item name="android:foreground">@drawable/ic_pdf</item>
+        <item name="android:scaleType">center</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <!-- Shape Appearances -->
+    <style name="ShapeAppearance.ProPdfViewer.Small" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="ShapeAppearance.ProPdfViewer.Medium" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="ShapeAppearance.ProPdfViewer.Large" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <!-- Animation Styles -->
+    <style name="WindowAnimation.ProPdfViewer" parent="Android.WindowAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_left</item>
+        <item name="android:windowReenterAnimation">@anim/slide_in_left</item>
+        <item name="android:windowReturnAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <style name="DialogAnimation.ProPdfViewer" parent="Android.DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <!-- Custom View Styles -->
+    <style name="Widget.ProPdfViewer.EmptyState">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">48dp</item>
+    </style>
+
+    <style name="Widget.ProPdfViewer.AdContainer">
+        <item name="android:background">@color/color_ad_background</item>
+        <item name="android:padding">8dp</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+</resources>

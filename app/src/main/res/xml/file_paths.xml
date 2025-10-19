@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- External storage paths -->
+    <external-path 
+        name="external_files" 
+        path="." />
+    
+    <external-files-path 
+        name="external_app_files" 
+        path="." />
+    
+    <external-cache-path 
+        name="external_app_cache" 
+        path="." />
+    
+    <!-- Internal storage paths -->
+    <files-path 
+        name="internal_files" 
+        path="." />
+    
+    <cache-path 
+        name="internal_cache" 
+        path="." />
+    
+    <!-- Root of external storage -->
+    <root-path 
+        name="root" 
+        path="." />
+    
+    <!-- Specific PDF directories -->
+    <external-files-path 
+        name="pdf_documents" 
+        path="Documents/" />
+    
+    <external-files-path 
+        name="pdf_downloads" 
+        path="Download/" />
+    
+    <external-files-path 
+        name="pdf_import" 
+        path="Import/" />
+    
+    <!-- Cache directories for thumbnails -->
+    <cache-path 
+        name="thumbnail_cache" 
+        path="thumbnails/" />
+    
+    <external-cache-path 
+        name="external_thumbnail_cache" 
+        path="thumbnails/" />
+
+</paths>

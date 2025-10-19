@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Create New Folder -->
+    <item
+        android:id="@+id/action_create_folder"
+        android:icon="@drawable/ic_create_new_folder"
+        android:title="@string/create_folder" />
+
+    <!-- Add PDF Files -->
+    <item
+        android:id="@+id/action_add_pdf"
+        android:icon="@drawable/ic_add_pdf"
+        android:title="@string/add_pdf" />
+
+    <!-- Import from Cloud -->
+    <item
+        android:id="@+id/action_import_cloud"
+        android:icon="@drawable/ic_cloud_upload"
+        android:title="@string/import_from_cloud" />
+
+    <!-- Scan Document -->
+    <item
+        android:id="@+id/action_scan_document"
+        android:icon="@drawable/ic_scanner"
+        android:title="@string/scan_document" />
+
+    <!-- Create from Template -->
+    <item
+        android:id="@+id/action_create_from_template"
+        android:icon="@drawable/ic_template"
+        android:title="@string/create_from_template" />
+
+    <!-- Quick Note -->
+    <item
+        android:id="@+id/action_quick_note"
+        android:icon="@drawable/ic_note"
+        android:title="@string/quick_note" />
+
+</menu>

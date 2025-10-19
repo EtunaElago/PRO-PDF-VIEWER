@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/android">
+
+    <!-- Appearance Category -->
+    <PreferenceCategory
+        android:title="@string/theme"
+        android:icon="@drawable/ic_lightbulb">
+
+        <ListPreference
+            android:key="pref_theme"
+            android:title="@string/select_theme"
+            android:summary="%s"
+            android:entries="@array/theme_entries"
+            android:entryValues="@array/theme_values"
+            android:defaultValue="auto"
+            android:icon="@drawable/ic_lightbulb" />
+
+        <ListPreference
+            android:key="pref_view_mode"
+            android:title="@string/select_view_mode"
+            android:summary="%s"
+            android:entries="@array/view_mode_entries"
+            android:entryValues="@array/view_mode_values"
+            android:defaultValue="grid"
+            android:icon="@drawable/ic_view_module" />
+
+    </PreferenceCategory>
+
+    <!-- Behavior Category -->
+    <PreferenceCategory
+        android:title="Behavior"
+        android:icon="@drawable/ic_settings">
+
+        <ListPreference
+            android:key="pref_sort_by"
+            android:title="@string/sort"
+            android:summary="%s"
+            android:entries="@array/sort_by_entries"
+            android:entryValues="@array/sort_by_values"
+            android:defaultValue="name"
+            android:icon="@drawable/ic_sort" />
+
+        <SwitchPreference
+            android:key="pref_auto_open_last"
+            android:title="Open last file on startup"
+            android:summary="Automatically open the last viewed PDF when app starts"
+            android:defaultValue="false"
+            android:icon="@drawable/ic_recent" />
+
+        <SwitchPreference
+            android:key="pref_show_thumbnails"
+            android:title="Show PDF thumbnails"
+            android:summary="Display preview images for PDF files"
+            android:defaultValue="true"
+            android:icon="@drawable/ic_pdf" />
+
+    </PreferenceCategory>
+
+    <!-- Privacy & Data Category -->
+    <PreferenceCategory
+        android:title="Privacy &amp; Data"
+        android:icon="@drawable/ic_privacy">
+
+        <SwitchPreference
+            android:key="pref_analytics"
+            android:title="Usage analytics"
+            android:summary="Help improve the app by sharing anonymous usage data"
+            android:defaultValue="true"
+            android:icon="@drawable/ic_analytics" />
+
+        <SwitchPreference
+            android:key="pref_crash_reports"
+            android:title="Crash reports"
+            android:summary="Automatically send crash reports to help fix issues"
+            android:defaultValue="true"
+            android:icon="@drawable/ic_bug_report" />
+
+        <Preference
+            android:key="pref_clear_cache"
+            android:title="Clear cache"
+            android:summary="Free up storage space by clearing temporary files"
+            android:icon="@drawable/ic_clear_all" />
+
+    </PreferenceCategory>
+
+    <!-- Storage Category -->
+    <PreferenceCategory
+        android:title="Storage"
+        android:icon="@drawable/ic_folder">
+
+        <Preference
+            android:key="pref_storage_location"
+            android:title="Storage location"
+            android:summary="Choose where to save PDF files"
+            android:icon="@drawable/ic_sd_card" />
+
+        <Preference
+            android:key="pref_bin_auto_clean"
+            android:title="Auto-empty bin"
+            android:summary="Automatically delete files from bin after 30 days"
+            android:icon="@drawable/ic_delete_forever" />
+
+    </PreferenceCategory>
+
+    <!-- About Category -->
+    <PreferenceCategory
+        android:title="About"
+        android:icon="@drawable/ic_info">
+
+        <Preference
+            android:key="pref_version"
+            android:title="@string/version"
+            android:summary="1.0.0"
+            android:icon="@drawable/ic_info"
+            android:selectable="false" />
+
+        <Preference
+            android:key="pref_privacy_policy"
+            android:title="@string/privacy_policy"
+            android:icon="@drawable/ic_privacy" />
+
+        <Preference
+            android:key="pref_terms"
+            android:title="@string/terms_of_service"
+            android:icon="@drawable/ic_terms" />
+
+        <Preference
+            android:key="pref_contact"
+            android:title="@string/contact_us"
+            android:icon="@drawable/ic_mail" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

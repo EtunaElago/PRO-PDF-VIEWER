@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_corner"
+    android:padding="16dp">
+
+    <!-- PDF Thumbnail/Icon -->
+    <FrameLayout
+        android:layout_width="48dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Thumbnail Image -->
+        <ImageView
+            android:id="@+id/imageThumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_pdf_thumbnail"
+            android:visibility="gone" />
+
+        <!-- PDF Icon (fallback) -->
+        <ImageView
+            android:id="@+id/imagePdfIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_pdf"
+            app:tint="?attr/colorPrimary" />
+
+    </FrameLayout>
+
+    <!-- PDF Info -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/checkboxSelection"
+        app:layout_constraintStart_toEndOf="@+id/imageThumbnail"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textPdfName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="PDF File Name"
+            android:textAppearance="?attr/textAppearanceBodyLarge"
+            android:textColor="?attr/colorOnSurface"
+            tools:text="Important Document.pdf" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textFileSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.5 MB"
+                android:textAppearance="?attr/textAppearanceBodySmall"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                tools:text="2.5 MB" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/colorOnSurfaceVariant"
+                android:alpha="0.5" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textPageCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15 pages"
+                android:textAppearance="?attr/textAppearanceBodySmall"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                tools:text="15 pages" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Selection Checkbox -->
+    <CheckBox
+        android:id="@+id/checkboxSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="?attr/colorPrimary"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Selection Overlay -->
+    <View
+        android:id="@+id/selectionOverlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?attr/colorPrimaryContainer"
+        android:alpha="0.1"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

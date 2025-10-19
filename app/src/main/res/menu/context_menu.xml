@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Open Action -->
+    <item
+        android:id="@+id/action_open"
+        android:title="@string/action_open" />
+
+    <!-- Rename Action -->
+    <item
+        android:id="@+id/action_rename"
+        android:title="@string/action_rename" />
+
+    <!-- Move to Action -->
+    <item
+        android:id="@+id/action_move_to"
+        android:title="@string/action_move_to" />
+
+    <!-- Copy to Action -->
+    <item
+        android:id="@+id/action_copy_to"
+        android:title="@string/action_copy_to" />
+
+    <!-- Share Action -->
+    <item
+        android:id="@+id/action_share"
+        android:title="@string/action_share" />
+
+    <!-- Info Action -->
+    <item
+        android:id="@+id/action_info"
+        android:title="@string/action_info" />
+
+    <!-- Move to Bin Action -->
+    <item
+        android:id="@+id/action_move_to_bin"
+        android:title="@string/action_move_to_bin" />
+
+    <!-- Delete Permanently Action -->
+    <item
+        android:id="@+id/action_delete_permanently"
+        android:title="@string/action_delete_permanently" />
+
+    <!-- Select All Action -->
+    <item
+        android:id="@+id/action_select_all"
+        android:title="@string/action_select_all" />
+
+    <!-- Remove from Folder Action (Only for PDFs inside folders) -->
+    <item
+        android:id="@+id/action_remove_from_folder"
+        android:title="@string/action_remove_from_folder" />
+
+</menu>

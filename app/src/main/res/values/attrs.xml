@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Custom attributes for PDF Thumbnail View -->
+    <declare-styleable name="PdfThumbnailView">
+        <attr name="thumbnailCornerRadius" format="dimension" />
+        <attr name="thumbnailElevation" format="dimension" />
+        <attr name="showPageNumber" format="boolean" />
+        <attr name="pageNumber" format="integer" />
+    </declare-styleable>
+
+    <!-- Custom attributes for Folder Grid Item -->
+    <declare-styleable name="FolderGridView">
+        <attr name="folderIconSize" format="dimension" />
+        <attr name="folderNameTextSize" format="dimension" />
+        <attr name="itemCountTextSize" format="dimension" />
+        <attr name="showItemCount" format="boolean" />
+    </declare-styleable>
+
+    <!-- Custom attributes for Loading State -->
+    <declare-styleable name="LoadingStateView">
+        <attr name="loadingText" format="string" />
+        <attr name="emptyText" format="string" />
+        <attr name="errorText" format="string" />
+        <attr name="loadingIcon" format="reference" />
+        <attr name="emptyIcon" format="reference" />
+        <attr name="errorIcon" format="reference" />
+    </declare-styleable>
+</resources>

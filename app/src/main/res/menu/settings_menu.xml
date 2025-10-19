@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Language Settings -->
+    <item
+        android:id="@+id/action_language"
+        android:title="@string/action_language" />
+
+    <!-- Bin Management -->
+    <item
+        android:id="@+id/action_bin"
+        android:title="@string/action_bin" />
+
+    <!-- About -->
+    <item
+        android:id="@+id/action_about"
+        android:title="@string/action_about" />
+
+    <!-- Share App -->
+    <item
+        android:id="@+id/action_share_app"
+        android:title="@string/action_share_app" />
+
+    <!-- Contact Us -->
+    <item
+        android:id="@+id/action_contact_us"
+        android:title="@string/action_contact_us" />
+
+    <!-- Privacy Policy -->
+    <item
+        android:id="@+id/action_privacy_policy"
+        android:title="@string/action_privacy_policy" />
+
+    <!-- Terms of Service -->
+    <item
+        android:id="@+id/action_terms_of_service"
+        android:title="@string/action_terms_of_service" />
+
+</menu>

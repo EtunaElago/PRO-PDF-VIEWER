@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Base configuration for the app -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system"/>
+            <certificates src="user"/>
+        </trust-anchors>
+    </base-config>
+    
+    <!-- Domain-specific configuration -->
+    <domain-config cleartextTrafficPermitted="false">
+        
+        <!-- Firebase Services -->
+        <domain includeSubdomains="true">firebase.googleapis.com</domain>
+        <domain includeSubdomains="true">firebaseinstallations.googleapis.com</domain>
+        <domain includeSubdomains="true">firebasestorage.googleapis.com</domain>
+        <domain includeSubdomains="true">googleapis.com</domain>
+        
+        <!-- Google Ads -->
+        <domain includeSubdomains="true">googleadservices.com</domain>
+        <domain includeSubdomains="true">googlesyndication.com</domain>
+        <domain includeSubdomains="true">doubleclick.net</domain>
+        <domain includeSubdomains="true">admob.com</domain>
+        
+        <!-- Analytics and Crash Reporting -->
+        <domain includeSubdomains="true">crashlytics.com</domain>
+        <domain includeSubdomains="true">fabric.io</domain>
+        <domain includeSubdomains="true">adjust.com</domain>
+        
+        <!-- App-specific domains -->
+        <domain includeSubdomains="true">propdf.com</domain>
+        <domain includeSubdomains="true">yourwebsite.com</domain>
+        
+        <!-- Trust additional certificates for these domains -->
+        <trust-anchors>
+            <certificates src="system"/>
+            <certificates src="user"/>
+        </trust-anchors>
+        
+    </domain-config>
+    
+    <!-- Debug configuration for development -->
+    <debug-overrides>
+        <trust-anchors>
+            <certificates src="system"/>
+            <certificates src="user"/>
+            <!-- Allow debug certificates -->
+            <certificates src="@raw/debug_cas"/>
+        </trust-anchors>
+    </debug-overrides>
+    
+</network-security-config>

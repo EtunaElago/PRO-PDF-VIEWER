@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Quick Add PDF Shortcut -->
+    <shortcut
+        android:shortcutId="add_pdf"
+        android:enabled="true"
+        android:icon="@drawable/ic_add_pdf"
+        android:shortcutShortLabel="@string/add_pdf"
+        android:shortcutLongLabel="@string/add_pdf"
+        android:shortcutDisabledMessage="@string/feature_not_available">
+        
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.PRO.propdf"
+            android:targetClass="com.PRO.propdf.MainActivity" />
+        
+        <categories android:name="android.shortcut.conversation" />
+        
+        <!-- Capabilities -->
+        <capability-binding android:key="actions.intent.CREATE_DOCUMENT">
+            <parameter-binding
+                android:key="document.name"
+                android:value="@string/add_pdf" />
+        </capability-binding>
+        
+    </shortcut>
+    
+    <!-- Recent Files Shortcut -->
+    <shortcut
+        android:shortcutId="recent_files"
+        android:enabled="true"
+        android:icon="@drawable/ic_recent"
+        android:shortcutShortLabel="@string/title_recents"
+        android:shortcutLongLabel="@string/title_recents"
+        android:shortcutDisabledMessage="@string/feature_not_available">
+        
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.PRO.propdf"
+            android:targetClass="com.PRO.propdf.MainActivity"
+            android:data="@string/deeplink_recents" />
+        
+        <categories android:name="android.shortcut.conversation" />
+        
+    </shortcut>
+    
+    <!-- Search PDFs Shortcut -->
+    <shortcut
+        android:shortcutId="search_pdfs"
+        android:enabled="true"
+        android:icon="@drawable/ic_search"
+        android:shortcutShortLabel="@string/search"
+        android:shortcutLongLabel="@string/search_in_pdf"
+        android:shortcutDisabledMessage="@string/feature_not_available">
+        
+        <intent
+            android:action="android.intent.action.SEARCH"
+            android:targetPackage="com.PRO.propdf"
+            android:targetClass="com.PRO.propdf.MainActivity" />
+        
+        <categories android:name="android.shortcut.conversation" />
+        
+        <!-- Capabilities for Google Assistant -->
+        <capability-binding android:key="actions.intent.SEARCH">
+            <parameter-binding
+                android:key="text"
+                android:value="^(?P&lt;query&gt;.+)$" />
+        </capability-binding>
+        
+    </shortcut>
+    
+    <!-- Create Folder Shortcut -->
+    <shortcut
+        android:shortcutId="create_folder"
+        android:enabled="true"
+        android:icon="@drawable/ic_create_new_folder"
+        android:shortcutShortLabel="@string/create_folder"
+        android:shortcutLongLabel="@string/create_new_folder"
+        android:shortcutDisabledMessage="@string/feature_not_available">
+        
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.PRO.propdf"
+            android:targetClass="com.PRO.propdf.MainActivity" />
+        
+        <categories android:name="android.shortcut.conversation" />
+        
+    </shortcut>
+    
+    <!-- Quick Settings Shortcut -->
+    <shortcut
+        android:shortcutId="quick_settings"
+        android:enabled="true"
+        android:icon="@drawable/ic_settings"
+        android:shortcutShortLabel="@string/title_settings"
+        android:shortcutLongLabel="@string/title_settings"
+        android:shortcutDisabledMessage="@string/feature_not_available">
+        
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.PRO.propdf"
+            android:targetClass="com.PRO.propdf.MainActivity"
+            android:data="@string/deeplink_settings" />
+        
+        <categories android:name="android.shortcut.conversation" />
+        
+    </shortcut>
+
+</shortcuts>

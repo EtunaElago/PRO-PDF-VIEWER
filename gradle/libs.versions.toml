@@ -1,0 +1,133 @@
+[versions]
+# Plugin versions
+agp = "8.4.0"
+kotlin = "1.9.20"
+hilt = "2.48.1"
+google-services = "4.4.0"
+crashlytics = "2.9.9"
+
+# Library versions
+core-ktx = "1.12.0"
+appcompat = "1.6.1"
+activity-ktx = "1.8.0"
+fragment-ktx = "1.6.1"
+material = "1.10.0"
+constraintlayout = "2.1.4"
+recyclerview = "1.3.2"
+
+# Lifecycle
+lifecycle-viewmodel = "2.7.0"
+lifecycle-livedata = "2.7.0"
+lifecycle-runtime = "2.7.0"
+
+# Navigation
+navigation-fragment = "2.7.4"
+navigation-ui = "2.7.4"
+
+# Room
+room = "2.6.0"
+
+# Firebase
+firebase-bom = "32.6.0"
+
+# Ads
+play-services-ads = "22.5.0"
+
+# PDF Viewer
+android-pdf-viewer = "3.2.0-beta.1"
+
+# Image Loading
+coil = "2.4.0"
+
+# Logging
+timber = "5.0.1"
+
+# Preferences
+preference-ktx = "1.2.1"
+
+# WorkManager
+work-runtime = "2.8.1"
+
+# Desugaring
+desugar-jdk-libs = "2.0.3"
+
+# Testing
+junit = "4.13.2"
+ext-junit = "1.1.5"
+espresso-core = "3.5.1"
+
+[libraries]
+# Core Android
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activity-ktx" }
+fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragment-ktx" }
+
+# UI
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
+
+# Lifecycle
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle-viewmodel" }
+lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle-livedata" }
+lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle-runtime" }
+lifecycle-common-java8 = { group = "androidx.lifecycle", name = "lifecycle-common-java8", version.ref = "lifecycle-runtime" }
+lifecycle-process = { group = "androidx.lifecycle", name = "lifecycle-process", version.ref = "lifecycle-runtime" }
+
+# Navigation
+navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation-fragment" }
+navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation-ui" }
+
+# Room
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+
+# Dependency Injection
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+hilt-navigation-fragment = { group = "androidx.hilt", name = "hilt-navigation-fragment", version.ref = "hilt" }
+
+# PDF Viewer
+android-pdf-viewer = { group = "com.github.barteksc", name = "android-pdf-viewer", version.ref = "android-pdf-viewer" }
+
+# Ads
+play-services-ads = { group = "com.google.android.gms", name = "play-services-ads", version.ref = "play-services-ads" }
+
+# Firebase
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase-bom" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
+firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics" }
+
+# Storage
+documentfile = { group = "androidx.documentfile", name = "documentfile", version = "1.0.1" }
+
+# Image Loading
+coil = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
+
+# Logging
+timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
+
+# Preferences
+preference-ktx = { group = "androidx.preference", name = "preference-ktx", version.ref = "preference-ktx" }
+
+# WorkManager
+work-runtime-ktx = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "work-runtime" }
+
+# Desugaring
+desugar-jdk-libs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "desugar-jdk-libs" }
+
+# Testing
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "ext-junit" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+google-services = { id = "com.google.gms.google-services", version.ref = "google-services" }
+firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "crashlytics" }

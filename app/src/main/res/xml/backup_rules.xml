@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Include app's internal storage -->
+    <include domain="file" path="."/>
+    
+    <!-- Include shared preferences -->
+    <include domain="sharedpref" path="."/>
+    
+    <!-- Include databases -->
+    <include domain="database" path="."/>
+    
+    <!-- Include external files in app-specific directory -->
+    <include domain="external" path="Android/data/com.PRO.propdf/files"/>
+    
+    <!-- Exclude cache directories -->
+    <exclude domain="file" path="cache"/>
+    <exclude domain="external" path="Android/data/com.PRO.propdf/cache"/>
+    
+    <!-- Exclude temporary files -->
+    <exclude domain="file" path="temp"/>
+    <exclude domain="file" path="tmp"/>
+    
+    <!-- Exclude analytics data that can be recreated -->
+    <exclude domain="sharedpref" path="firebase_analytics"/>
+    <exclude domain="sharedpref" path="com.google.firebase.analytics"/>
+    
+    <!-- Include app settings -->
+    <include domain="sharedpref" path="app_preferences.xml"/>
+    <include domain="sharedpref" path="user_settings.xml"/>
+    
+    <!-- Include folder structure data -->
+    <include domain="database" path="pro_pdf_database"/>
+</full-backup-content>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- PRO Brand Colors -->
+    <color name="pro_light_red">#FF6B6B</color>
+    <color name="pro_light_green">#51CF66</color>
+    <color name="pro_sky_blue">#339AF0</color>
+    <color name="pro_brand_primary">#4C6EF5</color>
+    <color name="pro_brand_secondary">#748FFC</color>
+
+    <!-- Material Design Color Palette -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Primary Colors -->
+    <color name="color_primary">@color/pro_brand_primary</color>
+    <color name="color_primary_variant">@color/pro_brand_secondary</color>
+    <color name="color_secondary">@color/teal_200</color>
+    <color name="color_secondary_variant">@color/teal_700</color>
+
+    <!-- Background Colors -->
+    <color name="color_background">#FFF8F9FA</color>
+    <color name="color_surface">#FFFFFFFF</color>
+    <color name="color_error">#B00020</color>
+
+    <!-- Text Colors -->
+    <color name="color_on_primary">@color/white</color>
+    <color name="color_on_secondary">@color/black</color>
+    <color name="color_on_background">#FF212529</color>
+    <color name="color_on_surface">#FF212529</color>
+    <color name="color_on_error">@color/white</color>
+
+    <!-- State Colors -->
+    <color name="color_primary_container">#FFE3F2FD</color>
+    <color name="color_secondary_container">#FFE8F5E8</color>
+    <color name="color_surface_variant">#FFE1E5E9</color>
+    <color name="color_outline">#FFCED4DA</color>
+
+    <!-- Semantic Colors -->
+    <color name="color_success">#28A745</color>
+    <color name="color_warning">#FFC107</color>
+    <color name="color_info">#17A2B8</color>
+    <color name="color_danger">#DC3545</color>
+
+    <!-- Status Bar Colors -->
+    <color name="color_status_bar">@color/color_primary_variant</color>
+
+    <!-- Navigation Colors -->
+    <color name="color_navigation_background">@color/color_surface</color>
+    <color name="color_navigation_icon">#FF6C757D</color>
+    <color name="color_navigation_icon_selected">@color/color_primary</color>
+    <color name="color_navigation_text">#FF6C757D</color>
+    <color name="color_navigation_text_selected">@color/color_primary</color>
+
+    <!-- Card Colors -->
+    <color name="color_card_background">@color/white</color>
+    <color name="color_card_elevation">#0A000000</color>
+
+    <!-- Divider Colors -->
+    <color name="color_divider">#FFE9ECEF</color>
+    <color name="color_divider_dark">#FF495057</color>
+
+    <!-- Icon Colors -->
+    <color name="color_icon_primary">#FF495057</color>
+    <color name="color_icon_secondary">#FF6C757D</color>
+    <color name="color_icon_disabled">#FFADB5BD</color>
+
+    <!-- PDF Specific Colors -->
+    <color name="color_pdf_background">#FF2B2B2B</color>
+    <color name="color_pdf_toolbar">#FF424242</color>
+    <color name="color_pdf_thumb_background">#FFF8F9FA</color>
+
+    <!-- Ad Colors -->
+    <color name="color_ad_background">#FFF1F3F5</color>
+    <color name="color_ad_border">#FFDEE2E6</color>
+
+    <!-- Dark Theme Colors -->
+    <color name="color_background_dark">#FF121212</color>
+    <color name="color_surface_dark">#FF1E1E1E</color>
+    <color name="color_on_background_dark">#FFFFFFFF</color>
+    <color name="color_on_surface_dark">#FFFFFFFF</color>
+    <color name="color_surface_variant_dark">#FF2D2D2D</color>
+    <color name="color_outline_dark">#FF404040</color>
+
+<!-- Legacy Icon Background -->
+<color name="ic_launcher_background">#FF6B6B</color>
+
+</resources>

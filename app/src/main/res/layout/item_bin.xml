@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_corner"
+    android:padding="16dp">
+
+    <!-- Bin Icon -->
+    <ImageView
+        android:id="@+id/imageBinIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_bin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="?attr/colorOnSurfaceVariant" />
+
+    <!-- PDF Info -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/layoutActions"
+        app:layout_constraintStart_toEndOf="@+id/imageBinIcon"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textPdfName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Deleted PDF File"
+            android:textAppearance="?attr/textAppearanceBodyLarge"
+            android:textColor="?attr/colorOnSurface"
+            tools:text="Deleted Document.pdf" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textFileSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="2.5 MB"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            tools:text="2.5 MB" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textDeletedDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Deleted on Jan 15, 2024"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            tools:text="Deleted on Jan 15, 2024" />
+
+    </LinearLayout>
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:id="@+id/layoutActions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Restore Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonRestore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/restore"
+            android:textColor="?attr/colorPrimary"
+            app:backgroundTint="?attr/colorPrimaryContainer"
+            app:cornerRadius="16dp"
+            style="@style/Widget.Material3.Button.TextButton" />
+
+        <!-- Delete Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_permanently"
+            android:textColor="?attr/colorError"
+            app:backgroundTint="?attr/colorErrorContainer"
+            app:cornerRadius="16dp"
+            style="@style/Widget.Material3.Button.TextButton" />
+
+    </LinearLayout>
+
+    <!-- Selection Checkbox -->
+    <CheckBox
+        android:id="@+id/checkboxSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="?attr/colorPrimary"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Selection Overlay -->
+    <View
+        android:id="@+id/selectionOverlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?attr/colorPrimaryContainer"
+        android:alpha="0.1"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

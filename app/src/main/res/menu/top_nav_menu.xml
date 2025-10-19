@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/android">
+
+    <!-- Add Button - Creates folder or adds PDF -->
+    <item
+        android:id="@+id/action_add"
+        android:icon="@drawable/ic_add"
+        android:title="@string/action_add"
+        app:showAsAction="always" />
+
+    <!-- Search Button -->
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/action_search"
+        app:showAsAction="collapseActionView|always"
+        app:actionViewClass="androidx.appcompat.widget.SearchView" />
+
+    <!-- More Options Menu -->
+    <item
+        android:id="@+id/action_more"
+        android:icon="@drawable/ic_more"
+        android:title="@string/action_more"
+        app:showAsAction="always">
+
+        <!-- Sort Submenu -->
+        <menu>
+            <group android:id="@+id/group_sort">
+
+                <!-- Sort by Name -->
+                <item
+                    android:id="@+id/action_sort_name"
+                    android:title="@string/sort_by_name" />
+
+                <!-- Sort by Date -->
+                <item
+                    android:id="@+id/action_sort_date"
+                    android:title="@string/sort_by_date" />
+
+                <!-- Sort by Size -->
+                <item
+                    android:id="@+id/action_sort_size"
+                    android:title="@string/sort_by_size" />
+
+                <!-- Sort Order Separator -->
+                <item
+                    android:id="@+id/action_sort_order_separator"
+                    android:title=""
+                    android:enabled="false" />
+
+                <!-- Ascending Order -->
+                <item
+                    android:id="@+id/action_sort_ascending"
+                    android:checkable="true"
+                    android:checked="true"
+                    android:title="@string/sort_ascending" />
+
+                <!-- Descending Order -->
+                <item
+                    android:id="@+id/action_sort_descending"
+                    android:checkable="true"
+                    android:title="@string/sort_descending" />
+
+            </group>
+
+            <!-- Theme Submenu -->
+            <group android:id="@+id/group_theme">
+
+                <!-- Theme Separator -->
+                <item
+                    android:id="@+id/action_theme_separator"
+                    android:title=""
+                    android:enabled="false" />
+
+                <!-- Light Theme -->
+                <item
+                    android:id="@+id/action_theme_light"
+                    android:checkable="true"
+                    android:title="@string/theme_light" />
+
+                <!-- Dark Theme -->
+                <item
+                    android:id="@+id/action_theme_dark"
+                    android:checkable="true"
+                    android:title="@string/theme_dark" />
+
+                <!-- Auto Theme -->
+                <item
+                    android:id="@+id/action_theme_auto"
+                    android:checkable="true"
+                    android:checked="true"
+                    android:title="@string/theme_auto" />
+
+            </group>
+
+            <!-- View Mode Submenu -->
+            <group android:id="@+id/group_view_mode">
+
+                <!-- View Mode Separator -->
+                <item
+                    android:id="@+id/action_view_mode_separator"
+                    android:title=""
+                    android:enabled="false" />
+
+                <!-- Grid View -->
+                <item
+                    android:id="@+id/action_view_grid"
+                    android:checkable="true"
+                    android:checked="true"
+                    android:title="@string/view_grid" />
+
+                <!-- List View -->
+                <item
+                    android:id="@+id/action_view_list"
+                    android:checkable="true"
+                    android:title="@string/view_list" />
+
+            </group>
+
+        </menu>
+
+    </item>
+
+</menu>

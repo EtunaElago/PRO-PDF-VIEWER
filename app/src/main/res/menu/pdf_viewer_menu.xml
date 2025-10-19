@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/android">
+
+    <!-- Search in PDF -->
+    <item
+        android:id="@+id/action_search_pdf"
+        android:icon="@drawable/ic_search"
+        android:title="@string/action_search_pdf"
+        app:showAsAction="ifRoom" />
+
+    <!-- Share PDF -->
+    <item
+        android:id="@+id/action_share_pdf"
+        android:icon="@drawable/ic_share"
+        android:title="@string/action_share_pdf"
+        app:showAsAction="ifRoom" />
+
+    <!-- Bookmark -->
+    <item
+        android:id="@+id/action_bookmark"
+        android:icon="@drawable/ic_bookmark"
+        android:title="@string/action_bookmark"
+        app:showAsAction="ifRoom" />
+
+    <!-- Print PDF -->
+    <item
+        android:id="@+id/action_print"
+        android:icon="@drawable/ic_print"
+        android:title="@string/action_print"
+        app:showAsAction="ifRoom" />
+
+    <!-- More Options -->
+    <item
+        android:id="@+id/action_more_pdf"
+        android:icon="@drawable/ic_more"
+        android:title="@string/action_more"
+        app:showAsAction="always">
+
+        <menu>
+            <!-- Rotate Pages -->
+            <item
+                android:id="@+id/action_rotate"
+                android:title="@string/action_rotate" />
+
+            <!-- Page Fit -->
+            <item
+                android:id="@+id/action_page_fit"
+                android:title="@string/action_page_fit" />
+
+            <!-- Night Mode -->
+            <item
+                android:id="@+id/action_night_mode"
+                android:checkable="true"
+                android:title="@string/action_night_mode" />
+
+            <!-- Auto Scroll -->
+            <item
+                android:id="@+id/action_auto_scroll"
+                android:checkable="true"
+                android:title="@string/action_auto_scroll" />
+
+        </menu>
+
+    </item>
+
+</menu>

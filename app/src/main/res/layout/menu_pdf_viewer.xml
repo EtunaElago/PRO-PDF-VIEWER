@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_zoom_in"
+        android:icon="@drawable/ic_zoom_in"
+        android:title="@string/zoom_in"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_zoom_out"
+        android:icon="@drawable/ic_zoom_out"
+        android:title="@string/zoom_out"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_fit_width"
+        android:title="@string/fit_width"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_fit_page"
+        android:title="@string/fit_page"
+        app:showAsAction="never" />
+
+</menu>

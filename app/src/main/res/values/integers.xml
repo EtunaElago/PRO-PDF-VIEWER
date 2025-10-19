@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Animation Durations -->
+    <integer name="nav_animation_duration">300</integer>
+    <integer name="dialog_animation_duration">200</integer>
+    <integer name="fade_animation_duration">150</integer>
+    <integer name="slide_animation_duration">250</integer>
+
+    <!-- Ad Refresh Rates -->
+    <integer name="ad_refresh_rate_seconds">30</integer>
+    <integer name="interstitial_ad_frequency">3</integer>
+
+    <!-- PDF Configuration -->
+    <integer name="pdf_default_zoom">100</integer>
+    <integer name="pdf_max_zoom">500</integer>
+    <integer name="pdf_min_zoom">10</integer>
+
+    <!-- File Limits -->
+    <integer name="max_recent_files">50</integer>
+    <integer name="max_search_results">100</integer>
+    <integer name="bin_retention_days">30</integer>
+
+    <!-- Performance Settings -->
+    <integer name="thumbnail_cache_size">50</integer>
+    <integer name="page_preload_count">3</integer>
+    <integer name="max_undo_actions">10</integer>
+
+    <!-- Analytics Sampling -->
+    <integer name="analytics_sampling_rate">100</integer>
+    <integer name="crash_reporting_sampling_rate">100</integer>
+</resources>

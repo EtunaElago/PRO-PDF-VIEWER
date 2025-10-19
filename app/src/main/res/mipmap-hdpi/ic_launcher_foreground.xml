@@ -1,0 +1,35 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108"
+    android:tint="@android:color/white">
+    
+    <!-- PRO Letters with brand colors -->
+    <group>
+        <!-- P - Light Red -->
+        <path
+            android:fillColor="@color/pro_light_red"
+            android:pathData="M30,25 L30,65 L45,65 C52,65 57,60 57,53 C57,46 52,41 45,41 L35,41 L35,25 L30,25 Z M35,46 L45,46 C49,46 52,49 52,53 C52,57 49,60 45,60 L35,60 L35,46 Z"/>
+        
+        <!-- R - Light Green -->
+        <path
+            android:fillColor="@color/pro_light_green"
+            android:pathData="M60,25 L60,65 L75,65 C82,65 87,60 87,53 C87,46 82,41 75,41 L65,41 L65,25 L60,25 Z M65,46 L75,46 C79,46 82,49 82,53 C82,57 79,60 75,60 L65,60 L65,46 Z M65,60 L70,65 L65,65 L65,60 Z"/>
+        
+        <!-- O - Sky Blue -->
+        <path
+            android:fillColor="@color/pro_sky_blue"
+            android:pathData="M90,45 C90,38 95,33 102,33 C109,33 114,38 114,45 C114,52 109,57 102,57 C95,57 90,52 90,45 Z M102,38 C97,38 94,41 94,45 C94,49 97,52 102,52 C107,52 110,49 110,45 C110,41 107,38 102,38 Z"/>
+    </group>
+    
+    <!-- PDF Document Outline -->
+    <path
+        android:strokeColor="@android:color/white"
+        android:strokeWidth="2"
+        android:pathData="M20,75 L88,75 L88,95 L20,95 Z"/>
+    <path
+        android:strokeColor="@android:color/white"
+        android:strokeWidth="1"
+        android:pathData="M25,80 L83,80 M25,85 L83,85 M25,90 L65,90"/>
+</vector>
