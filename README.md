@@ -40,3 +40,4 @@ Or download the latest APK from the [Releases](https://github.com/etunaelago/PRO
 1. Clone the repository
 ```bash
 git clone https://github.com/etunaelago/PRO-PDF-Viewer.git# Build trigger
+ 
