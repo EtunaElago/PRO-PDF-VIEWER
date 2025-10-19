@@ -27,7 +27,6 @@
             app:destination="@id/createFolderDialog" />
 
         <!-- Deep Link for Home -->
-        <deepLink app:uri="propdf://home" />
 
     </fragment>
 
@@ -70,7 +69,6 @@
             app:destination="@id/searchPdfDialog" />
 
         <!-- Deep Link for PDF Viewer -->
-        <deepLink app:uri="propdf://view/pdf/{pdfId}" />
 
     </fragment>
 
@@ -91,7 +89,6 @@
             app:popExitAnim="@anim/slide_out_right" />
 
         <!-- Deep Link for Recents -->
-        <deepLink app:uri="propdf://recents" />
 
     </fragment>
 
@@ -130,7 +127,6 @@
             app:popExitAnim="@anim/slide_out_right" />
 
         <!-- Deep Link for Settings -->
-        <deepLink app:uri="propdf://settings" />
 
     </fragment>
 
@@ -158,7 +154,6 @@
             app:popExitAnim="@anim/slide_out_right" />
 
         <!-- Deep Link for Bin -->
-        <deepLink app:uri="propdf://bin" />
 
     </fragment>
 
@@ -177,7 +172,6 @@
             app:popUpToInclusive="true" />
 
         <!-- Deep Link for About -->
-        <deepLink app:uri="propdf://about" />
 
     </fragment>
 
@@ -196,7 +190,6 @@
             app:popUpToInclusive="true" />
 
         <!-- Deep Link for Contact -->
-        <deepLink app:uri="propdf://contact" />
 
     </fragment>
 
